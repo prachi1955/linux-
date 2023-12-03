@@ -1,16 +1,16 @@
-#! /usr/bin/bash
+#/usr/bin/bash
 echo "enter the number"
 read num
 n=$num
-sum=0
-while [ $num -gt 0 ]
+s=0
+while [ $num -ne 0 ]
 do
-reminder=$((num % 10 ))
-sum=$((sum + reminder * reminder * reminder))
-num= $((num / 10))
+r=$((num % 10))
+s=$((s + r * r * r))
+num=$((num / 10))
 done
-if [ $n -eq $sum ]; then
-echo "$n is armstrong no."
+if [ $n -eq $s ]; then
+echo "$n is an armstrong number" 
 else
-echo "$n is not armstrong no."
+echo "$n is not armstrong"
 fi
